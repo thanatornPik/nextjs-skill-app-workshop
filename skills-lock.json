@@ -1,6 +1,24 @@
 {
   "version": 1,
   "skills": {
+    "deploy-docker-production": {
+      "source": "thanatornPik/my-agent-skills-course",
+      "sourceType": "github",
+      "skillPath": "skills/deploy-docker-production/SKILL.md",
+      "computedHash": "cdf0c32cb3247636c95518ed48c9821eb9de85957a3593f498b501312d5c8eaa"
+    },
+    "git-commit-guide": {
+      "source": "thanatornPik/my-agent-skills-course",
+      "sourceType": "github",
+      "skillPath": "skills/git-commit-guide/SKILL.md",
+      "computedHash": "47fc751ed01b04b8f6a3151e728907359680235681b94641283f5370cccb0c4f"
+    },
+    "project-onboarding": {
+      "source": "thanatornPik/my-agent-skills-course",
+      "sourceType": "github",
+      "skillPath": "skills/project-onboarding/SKILL.md",
+      "computedHash": "8497a9436f07af030d314b039d5fb34f2be7225907b0164f7d060bca736e084d"
+    },
     "vercel-react-best-practices": {
       "source": "vercel-labs/agent-skills",
       "sourceType": "github",
