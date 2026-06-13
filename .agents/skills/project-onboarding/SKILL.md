@@ -1,33 +1,50 @@
 ---
 name: project-onboarding
-description: Help a developer get set up and oriented in this Next.js 16 App Router + TypeScript Project. Use when someone is new to the repo, asks how to set up the project or "โปรเจกต์นี้ตั้งค่าอย่างไร" or "โปรเจกต์นี้ทำงานอย่างไร"
-license: Proprietary
-compatibility: Required Node.js 22+, npm, git and MariaDB
+description: Use this skill when a developer asks how to set up, run, or understand this Next.js project. Use for onboarding questions such as "โปรเจกต์นี้ตั้งค่าอย่างไร", "เริ่มรันยังไง", "ใช้ stack อะไร", or Docker/Prisma setup questions from someone new to the codebase.
+compatibility: Node.js 22+, npm, Git, MariaDB
+license: MIT
 metadata:
-  version: "1.0"
-  author: thanatornPik
+  author: Akenarin Komkoon
+  version: "1.0.0"
 ---
 
-# Project Onboarding
+# Project Onboarding Skill
 
-Get a new Developer from clone to first running change. Confirm each step before next.
+ช่วย developer ใหม่เข้าใจ project นี้จาก clone ไปจนรัน local ได้ โดยต้องอ้างอิงจากไฟล์จริงใน repo ก่อนตอบ
 
-## Setup sequence
+## Mandatory rules
+
+- ห้ามเดา script ที่ไม่มีใน `package.json`
+- ห้ามใช้คำสั่ง database destructive ระหว่าง onboarding เช่น `prisma db push`, `migrate deploy`, `migrate dev`
+- ถ้าพูดถึง Docker ต้องตรวจทั้ง `Dockerfile` และ `next.config.ts`
+
+## Setup Step
+
+ก่อนที่จะ setup ให้อ่านไฟล์นี้ เพื่อสร้างฐานข้อมูล ตาราง และข้อมูลเริ่มต้นเสมอ `references/database-setup.md`
+
+เสร็จแล้วให้ตรวจความถูกต้องของโปรเจกต์ด้วยคำสั่งนี้:
 
 ```bash
-# 1. Install deps (this repo use npm)
-npm install
-
-# 2. Environment
-cp .env.example .env.development
-
-# 3. Generate the Prisma client
-npx prisma generate
-
+npm run lint
+npm run dev
 ```
 
-## First task check list
+## Project gotchas
 
-Hand this to a new developer on day one. Tick each box
+อ่านรายละเอียดเพิ่มที่ `references/project-notes.md`
 
-- [ ] `npm run lint` pass
+- Next.js App Router + TypeScript
+- Prisma ใช้ custom output ไปที่ `generated/prisma`
+- Prisma Client import จาก generated path ไม่ใช่ `@prisma/client`
+- Dockerfile อาจใช้ `.next/standalone`; ต้องมี `output: "standalone"` ใน `next.config.ts`
+- UI หลักเป็นภาษาไทย
+
+## Output format
+
+ถ้าถามเกี่ยวกับ setup หรือตั้งค่าโปรเจกต์ ให้ใช้ template ใน `assets/templates/setup-table.md` เท่านั้น
+
+ต้องมีอย่างน้อย:
+- ภาพรวมสั้น ๆ
+- ตารางขั้นตอน setup
+- คำสั่งที่ต้องรัน
+- ข้อควรระวังของ repo นี้
