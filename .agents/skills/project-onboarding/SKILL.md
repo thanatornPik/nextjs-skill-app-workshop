@@ -20,6 +20,14 @@ metadata:
 
 ## Setup Step
 
+ให้้ตรวจและรัน script นี้ก่อน `.agents/skills/project-boarding/scripts/check-onboarding.sh`
+ถ้ารัน script ไม่ได้ ให้ตรวจเอง​:
+- `package.json`
+- `.env.example`
+- `prisma/schema.json`
+- `Dockerfile`
+- `next.config.ts`
+
 สำหรับ onboarding ทั่วไป ให้แนะนำเฉพาะคำสั่งเหล่านี้ที่ปลอดภัย:
 
 ```bash

@@ -17,7 +17,7 @@
       "source": "thanatornPik/my-agent-skills-course",
       "sourceType": "github",
       "skillPath": "skills/project-onboarding/SKILL.md",
-      "computedHash": "8497a9436f07af030d314b039d5fb34f2be7225907b0164f7d060bca736e084d"
+      "computedHash": "2e3771a13297292720c6f79beb3680ba6a6ddcd6f0d1c68f5102bd2ba3e6ca4a"
     },
     "vercel-react-best-practices": {
       "source": "vercel-labs/agent-skills",
