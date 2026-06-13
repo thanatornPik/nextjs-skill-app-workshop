@@ -15,19 +15,22 @@ metadata:
 ## Mandatory rules
 
 - ห้ามเดา script ที่ไม่มีใน `package.json`
-- ห้ามใช้คำสั่ง database destructive ระหว่าง onboarding เช่น `prisma db push`, `migrate deploy`, `migrate dev`
+- ห้ามใช้คำสั่ง database destructive ระหว่าง onboarding เช่น `npx prisma db push`, `npx prisma migrate deploy`, `npx prisma migrate dev`
 - ถ้าพูดถึง Docker ต้องตรวจทั้ง `Dockerfile` และ `next.config.ts`
 
 ## Setup Step
 
-ก่อนที่จะ setup ให้อ่านไฟล์นี้ เพื่อสร้างฐานข้อมูล ตาราง และข้อมูลเริ่มต้นเสมอ `references/database-setup.md`
-
-เสร็จแล้วให้ตรวจความถูกต้องของโปรเจกต์ด้วยคำสั่งนี้:
+สำหรับ onboarding ทั่วไป ให้แนะนำเฉพาะคำสั่งเหล่านี้ที่ปลอดภัย:
 
 ```bash
+npm install
+cp .env.example .env.development
+npx prisma generate
 npm run lint
 npm run dev
 ```
+
+**ถ้า user ถามเรื่อง database setup หรือ seed data โดยตรง ให้อ่านไฟล์นี้** `references/database-setup.md`
 
 ## Project gotchas
 
