@@ -24,7 +24,7 @@ metadata:
 
 ```bash
 npm install
-cp .env.example .env.development
+cp .env.example .env
 npx prisma generate
 npm run lint
 npm run dev

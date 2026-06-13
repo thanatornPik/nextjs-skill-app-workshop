@@ -5,7 +5,7 @@
 | ขั้นตอน | คำสั่ง | หมายเหตุ |
 |---|---|---|
 | 1. ติดตั้ง dependencies | `npm install` | ใช้ npm เป็นหลัก |
-| 2. สร้าง env | `cp .env.example .env.development` | อย่า reuse secret จริงจากตัวอย่าง |
+| 2. สร้าง env | `cp .env.example .env` | อย่า reuse secret จริงจากตัวอย่าง |
 | 3. Generate Prisma Client | `npx prisma generate` | จำเป็นเพราะใช้ custom output |
 | 4. ตรวจ lint | `npm run lint` | ใช้เฉพาะ script ที่มีจริง |
 | 5. รัน dev server | `npm run dev` | เปิด local development |
