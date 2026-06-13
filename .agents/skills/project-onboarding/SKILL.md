@@ -12,7 +12,7 @@ metadata:
 
 ช่วย developer ใหม่เข้าใจ project นี้จาก clone ไปจนรัน local ได้ โดยต้องอ้างอิงจากไฟล์จริงใน repo ก่อนตอบ
 
-## Mandatory rules
+## Gotchas
 
 - ห้ามเดา script ที่ไม่มีใน `package.json`
 - ห้ามใช้คำสั่ง database destructive ระหว่าง onboarding เช่น `npx prisma db push`, `npx prisma migrate deploy`, `npx prisma migrate dev`

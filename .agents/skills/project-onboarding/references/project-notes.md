@@ -37,4 +37,3 @@ npm run lint
 ## Env
 
 - ให้ copy `.env.example` เป็น `.env.development`
-- ถ้า `.env.example` มี password/token ที่ดูเหมือนจริง ให้ถือว่าเป็นตัวอย่างที่รั่วแล้ว ห้ามนำไปใช้จริง
