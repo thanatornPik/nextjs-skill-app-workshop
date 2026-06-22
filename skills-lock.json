@@ -7,6 +7,12 @@
       "skillPath": "skills/deploy-docker-production/SKILL.md",
       "computedHash": "cdf0c32cb3247636c95518ed48c9821eb9de85957a3593f498b501312d5c8eaa"
     },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "computedHash": "9e1c8b3103f92fa8092568a44fe64858de7c5c9dc65ce4bea8f168080e889cfd"
+    },
     "git-commit-guide": {
       "source": "thanatornPik/my-agent-skills-course",
       "sourceType": "github",
