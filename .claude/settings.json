@@ -1,0 +1,57 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "bash \"${CLAUDE_PROJECT_DIR}/.claude/Hooks/statusline-now.sh\" 2>/dev/null || true",  
+     "async": true
+    },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PROJECT_DIR}/.claude/Hooks/start.sh\" 2>/dev/null || true",
+            "timeout": 15,
+            "statusMessage": "Announcing start..."
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {        
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PROJECT_DIR}/.claude/Hooks/Approve.sh\" 2>/dev/null || true",
+            "timeout": 15,
+            "statusMessage": "Announcing permission request..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PROJECT_DIR}/.claude/Hooks/stop.sh\" 2>/dev/null || true",
+            "timeout": 15,
+            "statusMessage": "Announcing completion..."
+          }
+        ]
+      }
+    ],
+    "StopFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PROJECT_DIR}/.claude/Hooks/stop.sh\" 2>/dev/null || true",
+            "timeout": 15,
+            "statusMessage": "Announcing completion..."
+          }
+        ]
+      }
+    ]
+  }
+}
