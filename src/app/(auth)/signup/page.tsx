@@ -21,7 +21,9 @@ import {
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 import { authClient } from "@/lib/auth-client"
+import { getAuthErrorMessage } from "@/lib/auth-error"
 import { useRouter } from "next/navigation"
+import { useState } from "react"
 
 const registerSchema = z
   .object({
@@ -51,6 +53,7 @@ type RegisterFormValues = z.infer<typeof registerSchema>
 
 export default function RegisterForm() {
   const router = useRouter();
+  const [serverError, setServerError] = useState<string | null>(null);
   const form = useForm<RegisterFormValues>({
     resolver: zodResolver(registerSchema),
     defaultValues: {
@@ -62,6 +65,7 @@ export default function RegisterForm() {
   })
 
   async function onSubmit(data: RegisterFormValues) {
+     setServerError(null);
      await authClient.signUp.email({
       name: data.name,
       email: data.email,
@@ -72,7 +76,8 @@ export default function RegisterForm() {
           router.replace('/login');
         },
         onError: (ctx) => {
-          alert(JSON.stringify(ctx.error));
+          console.error(ctx.error);
+          setServerError(getAuthErrorMessage(ctx.error?.code));
         }
      });
   }
@@ -177,6 +182,11 @@ export default function RegisterForm() {
         </form>
       </CardContent>
       <CardFooter className="flex flex-col gap-3">
+        {serverError && (
+          <p role="alert" className="w-full text-center text-sm text-destructive">
+            {serverError}
+          </p>
+        )}
         <Button type="submit" form="form-register" className="w-full">
           สมัครสมาชิก
         </Button>
