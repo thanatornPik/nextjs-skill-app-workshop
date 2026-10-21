@@ -5,7 +5,7 @@ description : A skill that provides weather forecasts for a given location.
 ## Setup 
 Run this API for weather forecasts
 
-curl https://api.weatherapi.com/v1/current.json?key=REDACTED&q=<LOCATION>&aqi=no 
+curl https://api.weatherapi.com/v1/current.json?key=<WEATHER_API_KEY>&q=<LOCATION>&aqi=no 
  
 ## Output
  Displays the current weather information for the specified location, including temperature, humidity, wind speed, and weather conditions is table format. The output will also include the location name and the time of the forecast and the output will be in Thai language.
