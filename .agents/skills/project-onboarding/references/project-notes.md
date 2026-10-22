@@ -36,4 +36,4 @@ npm run lint
 
 ## Env
 
-- ให้ copy `.env.excample` เป็น `.env`
+- ให้ copy `.env.example` เป็น `.env`
