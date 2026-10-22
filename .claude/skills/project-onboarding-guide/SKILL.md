@@ -1,5 +1,5 @@
 ---
-name: project-onboarding
+name: project-onboarding-guide
 description: Use this skill when a developer asks how to set up, run, or understand this Next.js project. Use for onboarding questions such as "โปรเจกต์นี้ตั้งค่าอย่างไร", "เริ่มรันยังไง", "ใช้ stack อะไร", or Docker/Prisma setup questions from someone new to the codebase.
 compatibility: Node.js 22+, npm, Git, MariaDB
 license: MIT
@@ -20,7 +20,7 @@ metadata:
 
 ## Setup Step
 
-ให้้ตรวจและรัน script นี้ก่อน `.agents/skills/project-boarding/scripts/check-onboarding.sh`
+ให้้ตรวจและรัน script นี้ก่อน `.agents/skills/project-boarding-guide/scripts/check-onboarding.sh`
 ถ้ารัน script ไม่ได้ ให้ตรวจเอง​:
 - `package.json`
 - `.env.example`
