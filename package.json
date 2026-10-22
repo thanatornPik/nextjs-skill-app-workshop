@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "skills": "powershell -NoProfile -ExecutionPolicy Bypass -File _skills/_sync-ai-skills.ps1",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
