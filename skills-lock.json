@@ -8,10 +8,10 @@
       "computedHash": "1846141c77eaada59e449d831720ac1fd3f99e5cb22c30ed42ea5e4d14bd3cda"
     },
     "deploy-docker-production": {
-      "source": "thanatornPik/my-agent-skills-course",
+      "source": "thanatornPik/agent-skills-master",
       "sourceType": "github",
       "skillPath": "skills/deploy-docker-production/SKILL.md",
-      "computedHash": "be5848037d25a3b7260b130be122dc4ac282c035f13e60c6c140ce86637d5301"
+      "computedHash": "daef1db5db78e9e1db4f080c915014392f16afd027ecd4574491b3f1a99fa45c"
     },
     "find-skills": {
       "source": "vercel-labs/skills",
@@ -19,11 +19,23 @@
       "skillPath": "skills/find-skills/SKILL.md",
       "computedHash": "b146008599c31057cef1c145774cea5d5afb30e8f43fa802e47a4b461419aaaf"
     },
+    "git-commit-automate": {
+      "source": "thanatornPik/agent-skills-master",
+      "sourceType": "github",
+      "skillPath": "skills/git-commit-automate/SKILL.md",
+      "computedHash": "13aacc0d7336a0f6f378af56a4d990587e1e0cc949046c09df4330224833fc6e"
+    },
     "project-onboarding": {
       "source": "thanatornPik/my-agent-skills-course",
       "sourceType": "github",
       "skillPath": "skills/project-onboarding/SKILL.md",
       "computedHash": "e072f2862f70f6ec1d6b54bed2c7be7372197bdc89d575d010d52e13f6a88d51"
+    },
+    "project-onboarding-guide": {
+      "source": "thanatornPik/agent-skills-master",
+      "sourceType": "github",
+      "skillPath": "skills/project-onboarding-guide/SKILL.md",
+      "computedHash": "d732589cd8239ca40d2d11794af444b10d9e90efa39f5d96a27ea074ab9127d3"
     },
     "vercel-react-best-practices": {
       "source": "vercel-labs/agent-skills",
